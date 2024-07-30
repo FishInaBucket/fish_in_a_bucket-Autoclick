@@ -12,7 +12,7 @@ yes, if you don´t trust me, check by yourself, I let the whole code commented (
 
 # CHANGE LOG
 
-updated the autoclick code and add Main.exe
+updated the autoclick code and add Main.exe 0.0.7
 
 more on style changes and some code for futionalities for the auto-click and update of LEIAME.MD - 0.0.6
 
