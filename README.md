@@ -12,6 +12,8 @@ yes, if you don´t trust me, check by yourself, I let the whole code commented (
 
 # CHANGE LOG
 
+updated the autoclick code and add Main.exe
+
 more on style changes and some code for futionalities for the auto-click and update of LEIAME.MD - 0.0.6
 
 just changing style and adding buttons: 0.0.1 - 0.0.5
