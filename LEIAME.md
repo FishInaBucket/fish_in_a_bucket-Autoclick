@@ -12,6 +12,8 @@ Sim, caso não confie, deixei o código o mais comentado possivel(até quem não
 
 # CHANGE LOG
 
+atualização do código do autoclick e adicionei um Main.exe 0.0.7
+
 mais mudança estética e um pouco do codigo para dar funcionalidade a parte de auto-clique e atualização do LEIAME.MD - 0.0.6
 
 mudanças estéticas da 0.0.1 - 0.0.5
