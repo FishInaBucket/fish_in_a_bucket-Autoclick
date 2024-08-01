@@ -33,6 +33,15 @@ class Application: #responsavel por abrir a janela - Inicio
         except KeyboardInterrupt:
             print("auto-click interrompido")
 
+    def autotype_code(self):
+        global atraso, rep, text
+
+        atraso = float(self.enty_atra_var.get())
+        rep = float(self.enty_rep_var.get())
+        text = str(self.enty_text_var.get())
+
+
+
     def autoclick(self): #autoclick
         autoclick = tkinter.Toplevel()
         autoclick.title("Autoclicker")
@@ -69,11 +78,32 @@ class Application: #responsavel por abrir a janela - Inicio
     def autotype(self): #autotype
         autotype = Tk()
         autotype.title("Auto-Typer")
-        autotype.minsize(390, 282)
+        autotype.minsize(590, 482)
         autotype.resizable(False, False)
         autotype.configure(background='#023059')
 
         Button(autotype, text='[Excluir pagina]', command=autotype.destroy).place(relx=0.02, rely=0.02, relwidth=0.2, relheight=0.1)
+
+        self.au_type = Button(autotype, text="INICIAR AUTO-TYPE", foreground="red", command=self.autotype_code)
+        self.au_type.place(relx=0.099, rely=0.2, relwidth=0.7, relheight=0.2)
+
+        # atraso antes de comecar o auto-type
+        self.enty_atra_var = StringVar()
+        Label(autotype, text="atraso antes de começar (segundo(s))").place(relx=0.05, rely=0.5, relwidth=0.4, relheight=0.1)
+        self.enty_atraso = Entry(autotype, width=30, textvariable=self.enty_atra_var)
+        self.enty_atraso.place(relx=0.05, rely=0.6, relwidth=0.4, relheight=0.1)
+
+        # total de repeticoes
+        self.enty_rep_var = StringVar()
+        Label(autotype, text="Repetir").place(relx=0.05, rely=0.8, relwidth=0.4, relheight=0.1)
+        self.enty_rep = Entry(autotype, width=30, textvariable=self.enty_rep_var)
+        self.enty_rep.place(relx=0.05, rely=0.9, relwidth=0.4, relheight=0.1)
+
+        #coloque a sequencia de letras
+        self.enty_text_var = StringVar()
+        Label(autotype, text="caracteres/texto").place(relx=0.5, rely=0.8, relwidth=0.4, relheight=0.1)
+        self.enty_text = Entry(autotype, width=30, textvariable=self.enty_text_var)
+        self.enty_text.place(relx=0.5, rely=0.9, relwidth=0.4, relheight=0.1)
 
     def automation(self): #automacao
         automation = Tk()
