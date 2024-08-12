@@ -8,6 +8,7 @@ I make this autoclick program without intention of earn money, use this program 
 # questions:
 
 it´s safe?
+
 yes, if you don´t trust me, check by yourself, I let the whole code commented (if you want take this code and use, go on, no problem)
 
 # CHANGE LOG
