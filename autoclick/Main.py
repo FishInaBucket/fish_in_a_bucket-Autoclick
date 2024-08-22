@@ -117,11 +117,52 @@ class Application: # responsável por abrir a janela - Início
     def automation(self): # automação
         automation = tk.Toplevel()
         automation.title("Automação")
-        automation.minsize(500, 500)
+        automation.minsize(1100, 600)
         automation.resizable(True, True)
         automation.configure(background='#030833')
 
         Button(automation, text='[Excluir pagina]', command=automation.destroy).place(relx=0.02, rely=0.02, relwidth=0.2, relheight=0.1)
+
+        #iniciar automation
+        self.auto_ini = Button(automation, text="Iniciar Automation", foreground="blue")
+        self.auto_ini.place(relx=0.00, rely=0.2, relwidth=0.3, relheight=0.1)
+
+
+        # add acao mouse
+        self.au_acao_mouse = Button(automation, text="adicionar Ação (mover mouse)", foreground="green")
+        self.au_acao_mouse.place(relx=0.00, rely=0.3, relwidth=0.3, relheight=0.1)
+        # add acao entry
+        self.enty_auto_mousex = Entry(automation)
+        self.enty_auto_mousex.place(relx=0.3, rely=0.3, relwidth=0.1, relheight=0.1)
+        self.enty_auto_mousex.insert(0, "xxx")
+
+        self.enty_auto_mousey = Entry(automation)
+        self.enty_auto_mousey.place(relx=0.4, rely=0.3, relwidth=0.1, relheight=0.1)
+        self.enty_auto_mousey.insert(0, "yyy")
+
+
+        #click mouse
+        self.auto_click_mouse = Button(automation, text="adicionar ação (click mouse)", foreground="green")
+        self.auto_click_mouse.place(relx=0.00, rely=0.4, relwidth=0.3, relheight=0.1)
+
+
+        #digitar texto
+        self.auto_digit = Button(automation, text="adicionar Ação (digitar texto)", foreground="green")
+        self.auto_digit.place(relx=0.00, rely=0.5, relwidth=0.3, relheight=0.1)
+        self.enty_texto_auto = Entry(automation)
+        self.enty_texto_auto.place(relx=0.3, rely=0.5, relwidth=0.2, relheight=0.1)
+
+        # DEL ação
+        self.au_ini = Button(automation, text="Deletar Ação", foreground="red")
+        self.au_ini.place(relx=0.00, rely=0.6, relwidth=0.3, relheight=0.1)
+
+
+        #Lista de açôes
+        self.au_list = Listbox(automation)
+        self.au_list.place(relx=0.6, rely=0.03, relwidth=0.4, relheight=0.9)
+
+        self.au_list.insert(1, "inform1") #teste
+
 
     def Screen(self): # tela principal
         self.root.title("Fish-In-a-Bucket => Autoclick")
